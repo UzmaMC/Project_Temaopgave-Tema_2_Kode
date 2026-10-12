@@ -758,3 +758,37 @@ h3 span { display: inline-block; }
     margin-right: var(--page-gutter-mobile);
   }
 }
+
+/* Final Figma alignment fixes */
+@media (min-width: 901px) {
+  .first-plant-step p {
+    margin-top: 0;
+    margin-left: 49px;
+  }
+}
+
+.first-plant-step--two,
+.first-plant-step--three {
+  border-top: 2px solid var(--light-beige);
+}
+
+@media (max-width: 900px) {
+  .first-plant-step p {
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  .hero-content {
+    order: 1;
+  }
+
+  .hero-image {
+    order: 2;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    width: calc(100vw - (2 * var(--page-gutter-mobile)));
+  }
+}
