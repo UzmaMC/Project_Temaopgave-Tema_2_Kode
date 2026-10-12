@@ -728,3 +728,33 @@ h3 span { display: inline-block; }
     padding-right: 0;
   }
 }
+
+/* Targeted Figma alignment fixes */
+@media (min-width: 901px) {
+  .equipment-section {
+    margin-top: 56px;
+  }
+
+  .equipment-cta {
+    margin: 40px 0 43px calc(41.67% + 2px);
+  }
+
+  .plant-cards {
+    width: min(1076px, calc(100% - (2 * var(--page-gutter-desktop))));
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .equipment-cta {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .plant-cards {
+    width: calc(100% - (2 * var(--page-gutter-mobile)));
+    margin-left: var(--page-gutter-mobile);
+    margin-right: var(--page-gutter-mobile);
+  }
+}
