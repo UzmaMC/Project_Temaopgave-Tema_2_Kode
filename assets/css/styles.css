@@ -137,6 +137,8 @@ h1 {
   letter-spacing: 0;
 }
 
+
+
 .hero-copy {
   width: 245px;
   margin-top: 0;
@@ -178,6 +180,8 @@ h1 {
   width: min(1292px, 90%);
   margin: 80px auto 80px;
 }
+
+#how-to-title { margin-bottom: 40px; }
 
 h2 {
   font-size: 30px;
@@ -271,8 +275,8 @@ h3 span { display: inline-block; }
   font-size: 30px;
   font-weight: 500;
   line-height: 25px;
+  margin-bottom: 20px;
 }
-
 .equipment-intro p {
   margin-top: 0;
   font-size: 18px;
@@ -359,6 +363,7 @@ h3 span { display: inline-block; }
   .equipment-intro h1 {
     font-size: 26px;
     line-height: 25px;
+  
   }
 
   .equipment-intro p { margin-top: 0; }
@@ -399,7 +404,7 @@ h3 span { display: inline-block; }
 }
 
 .guide-intro h1 {
-  margin-bottom: 0;
+  margin-bottom: 20px;
   font-size: 30px;
   font-weight: 500;
   line-height: 25px;
@@ -539,6 +544,7 @@ h3 span { display: inline-block; }
   .guide-intro h1 {
     font-size: 26px;
     line-height: 25px;
+    margin-bottom: 40px;
   }
 
   .guide-intro p {
@@ -599,8 +605,15 @@ h3 span { display: inline-block; }
   .guide-cta { width: 302px; margin: 40px auto; }
 }
 /* Din første plante */
+
 .first-plant-intro{width:min(549px,calc(100% - 48px));margin:40px 0 0 5.07%}
-.first-plant-intro h1{margin:0}
+.first-plant-intro h1 {
+
+  margin:0; 
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 25px;}
 .first-plant-intro p{margin:6px 0 0}
 .first-plant-guide{width:min(1292px,89.86%);margin:48px auto 0;display:grid;grid-template-columns:minmax(0,500px) minmax(0,1fr);column-gap:50px;row-gap:40px}
 .first-plant-image,.first-plant-image img{height:150px}
@@ -625,4 +638,93 @@ h3 span { display: inline-block; }
   .first-plant-step--two,.first-plant-step--three{border-top:1px solid var(--dark-brown)}
   .first-plant-image--one{order:1}.first-plant-step--one{order:2}.first-plant-image--two{order:3}.first-plant-step--two{order:4}.first-plant-image--three{order:5}.first-plant-step--three{order:6}
   .first-plant-cta{width:calc(100% - 48px);margin:0 auto 40px}
+}
+
+/* Shared horizontal content alignment */
+:root {
+  --page-gutter-desktop: 72px;
+  --page-gutter-mobile: 24px;
+}
+
+@media (min-width: 901px) {
+  .site-header {
+    padding-inline: 0;
+  }
+
+  .header-inner,
+  .hero,
+  .how-to,
+  .footer-inner,
+  .equipment-section,
+  .guide-steps,
+  .plant-cards,
+  .first-plant-guide {
+    width: calc(100% - (2 * var(--page-gutter-desktop)));
+    max-width: none;
+  }
+
+  .header-inner,
+  .hero,
+  .how-to,
+  .footer-inner,
+  .guide-steps,
+  .plant-cards,
+  .first-plant-guide {
+    margin-inline: auto;
+  }
+
+  .equipment-intro,
+  .guide-intro,
+  .first-plant-intro {
+    margin-left: var(--page-gutter-desktop);
+  }
+
+  .equipment-section {
+    margin-left: var(--page-gutter-desktop);
+    margin-right: var(--page-gutter-desktop);
+  }
+
+  .footer-inner {
+    padding-inline: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .site-header {
+    padding-inline: 0;
+  }
+
+  .header-inner,
+  .hero,
+  .how-to,
+  .footer-inner,
+  .equipment-intro,
+  .equipment-section,
+  .guide-intro,
+  .guide-steps,
+  .plant-cards,
+  .first-plant-intro,
+  .first-plant-guide {
+    width: calc(100% - (2 * var(--page-gutter-mobile)));
+  }
+
+  .header-inner,
+  .hero,
+  .how-to,
+  .footer-inner,
+  .equipment-intro,
+  .equipment-section,
+  .guide-intro,
+  .guide-steps,
+  .plant-cards,
+  .first-plant-intro,
+  .first-plant-guide {
+    margin-left: var(--page-gutter-mobile);
+    margin-right: var(--page-gutter-mobile);
+  }
+
+  .footer-inner {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
